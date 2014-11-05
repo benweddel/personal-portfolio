@@ -9,10 +9,12 @@ $fontWeight: 300;
 $fontColour: #333;
 $inverseColour: #efefef;
 
-$primaryColour: #81B89D ;
+$primaryColour: #81B89D;
 $successColour: #759DA7;
 $errorColour: #EB4B4D;
 $sectionColour: #3A3736;
+
+$dHeight: 350px;
 
 // --- Partials ---
 @import "starter";
@@ -20,7 +22,6 @@ $sectionColour: #3A3736;
 // --- Page Layout ---
 
 body {
-  color: $fontColour;
   color: $fontColour;
   font-family: $baseFont;
   font-size: $fontSize;
@@ -46,4 +47,68 @@ p {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+// ----- Navigation -----
+
+header {
+  background: #5B848E;
+  ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 15px;
+    a {
+      color: #fff;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  } 
+}
+
+// ----- Home -----
+
+.container{
+  position: relative;
+  margin: 250px 0;
+}
+.diamond {
+  z-index: 1; 
+  width: $dHeight;
+  height: $dHeight;
+  background: red;
+  transform: rotate(45deg);
+  position: absolute;
+  top: calc(50% - #{$dHeight/2});
+  left: calc(50% - #{$dHeight/2});
+}
+
+.intro {
+  z-index: 2; 
+  position: relative;
+  text-align: center; 
+  h1, h2 {
+    margin: 25px 0;
+  }
+}
+
+// ----- Social -----
+
+.social {
+  ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 15px;
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  } 
 }
