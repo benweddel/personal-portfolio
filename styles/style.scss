@@ -1,0 +1,49 @@
+// --- Font Import ---
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600|Playfair+Display:400,700);
+
+$baseFont: 'Source Sans Pro', sans-serif;
+$headingsFont: 'Playfair Display', serif;
+$fontSize: 1.6em;
+$fontWeight: 300;
+$fontColour: #333;
+$inverseColour: #efefef;
+
+$primaryColour: #81B89D ;
+$successColour: #759DA7;
+$errorColour: #EB4B4D;
+$sectionColour: #3A3736;
+
+// --- Partials ---
+@import "starter";
+
+// --- Page Layout ---
+
+body {
+  color: $fontColour;
+  color: $fontColour;
+  font-family: $baseFont;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: $headingsFont;
+  margin: $fontSize*1.4 0;
+}
+
+p {
+  line-height: $fontSize*1.1;
+  margin: $fontSize*0.5 0;
+}
+
+ a {
+  color: $primaryColour;
+  text-decoration: none;
+ }
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
