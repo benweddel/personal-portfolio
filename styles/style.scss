@@ -1,5 +1,4 @@
-// --- Font Import ---
-
+// ----- Font Import -----
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600|Playfair+Display:400,700);
 
 $baseFont: 'Source Sans Pro', sans-serif;
@@ -14,13 +13,17 @@ $successColour: #759DA7;
 $errorColour: #EB4B4D;
 $sectionColour: #3A3736;
 
-$dHeight: 350px;
+$dHeight: 275px;
+$socialHeight: 50px;
 
-// --- Partials ---
+// ----- Partials -----
 @import "starter";
+@import "portfolio";
+@import "test";
+@import "footer";
 
-// --- Page Layout ---
 
+// ----- General Layout -----
 body {
   color: $fontColour;
   font-family: $baseFont;
@@ -31,6 +34,35 @@ body {
 h1,h2,h3,h4,h5 {
   font-family: $headingsFont;
   margin: $fontSize*1.4 0;
+}
+
+h2 {
+  width: 400px;
+  margin: 42px auto;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+  &:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background:#000;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -3px;
+    border-top: none;
+    border-left: none;
+  }
 }
 
 p {
@@ -49,10 +81,22 @@ p {
   margin: 0 auto;
 }
 
-// ----- Navigation -----
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: url(../images/overlay-pattern.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0.3;
+}
 
+// ----- Navigation -----
 header {
   background: #5B848E;
+  position: relative;
+  z-index: 101;
   ul {
     text-align: center;
     padding: 0;
@@ -65,6 +109,9 @@ header {
       color: #fff;
       display: inline-block;
       text-transform: uppercase;
+      &:hover {
+        color: red;
+      }
     }
   } 
 }
@@ -73,13 +120,13 @@ header {
 
 .container{
   position: relative;
-  margin: 250px 0;
+  margin: 160px 0;
 }
 .diamond {
-  z-index: 1; 
+  z-index: 95; 
   width: $dHeight;
   height: $dHeight;
-  background: red;
+  background: #fff;
   transform: rotate(45deg);
   position: absolute;
   top: calc(50% - #{$dHeight/2});
@@ -87,31 +134,98 @@ header {
 }
 
 .intro {
-  z-index: 2; 
+  z-index: 100; 
   position: relative;
   text-align: center; 
-  h1, h2 {
-    margin: 25px 0;
+  h1, h3 {
+    margin: 15px 0;
+  }
+  p {
+    margin: 0;
   }
 }
 
-// ----- Social -----
-
-.social {
-  ul {
-    text-align: center;
-    padding: 0;
-    margin: 0;
+// ----- About -----
+.col-1-2  {
+  width: 50%;
+  float: right;
+}
+.about { 
+  background: #ddd;
+  padding-bottom: 40px;
+  h2 {
+  width: 100%;
+  text-align: left;
   }
-  li {
-    display: inline-block;
-    padding: 15px;
-    a {
+}
+
+.experience {
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.jobs {
+  margin: 40px 0 60px 0;
+}
+
+.job {
+  width: 50%;
+  float: left;
+  margin-bottom: 30px;
+  padding-right: 20px;
+  img {
+    float: left;
+    margin-right: 10px;
+  }
+  h3, h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+// ----- Skills -----
+.skills {
+  margin: 0 auto;
+  padding: 50px 0;
+  background: #ddd;
+  text-align: center;
+  .wrapper {
+    width: 70%;
+  }
+  h2 {
+    margin: 0 auto;
+  }
+}
+
+.skill {
+  width: 33.33%;
+  float: left;
+  h3 {
+    margin-bottom: 20px;
+  }
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.character {
+  h2 {
+    text-align: center;
+  }
+  .char {
+    p {
       display: inline-block;
-      text-transform: uppercase;
-      i {
-        font-size: 40px;
-      }
+      margin: 0;
+      vertical-align: middle;
     }
-  } 
+  }
 }
