@@ -1,6 +1,8 @@
 footer {
   background: $primaryColour;
   padding: 30px 0;
+  position: relative;
+  z-index: 99;
 }
 
 #home {

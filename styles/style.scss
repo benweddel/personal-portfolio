@@ -9,6 +9,7 @@ $fontColour: #333;
 $inverseColour: #efefef;
 
 $primaryColour: #81B89D;
+$secondaryColour: #FE6A14;
 $successColour: #759DA7;
 $errorColour: #EB4B4D;
 $sectionColour: #3A3736;
@@ -18,9 +19,10 @@ $socialHeight: 50px;
 
 // ----- Partials -----
 @import "starter";
+@import "skills";
 @import "portfolio";
-@import "test";
 @import "footer";
+@import "test";
 
 
 // ----- General Layout -----
@@ -188,44 +190,5 @@ header {
   }
   p {
     text-align: left;
-  }
-}
-
-// ----- Skills -----
-.skills {
-  margin: 0 auto;
-  padding: 50px 0;
-  background: #ddd;
-  text-align: center;
-  .wrapper {
-    width: 70%;
-  }
-  h2 {
-    margin: 0 auto;
-  }
-}
-
-.skill {
-  width: 33.33%;
-  float: left;
-  h3 {
-    margin-bottom: 20px;
-  }
-  ul {
-    padding: 0;
-    list-style-type: none;
-  }
-}
-
-.character {
-  h2 {
-    text-align: center;
-  }
-  .char {
-    p {
-      display: inline-block;
-      margin: 0;
-      vertical-align: middle;
-    }
   }
 }
