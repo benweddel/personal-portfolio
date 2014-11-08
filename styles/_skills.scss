@@ -28,12 +28,19 @@
     text-align: center;
   }
   .char {
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
     p {
-      display: inline-block;
       margin: 0;
-      vertical-align: middle;
+      text-align: center;
     }
   }
+}
+.charIcons {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @-webkit-keyframes spin {
@@ -63,7 +70,17 @@
   }
 }
 
-#Ebene_1 {
+@-webkit-keyframes bellRing {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+#gears {
+  width: 100px;
   .bigGear, .smallGear {
     transform-origin: 50% 50%;
     display: inline-block;
@@ -106,10 +123,6 @@
   stroke: black;
 }
 
-.positive {
-  position: relative;
-  display: inline-block;
-}
 .positive:hover {
   #cloud {
     // -webkit-animation: cloudleft linear 2s forwards;
@@ -121,21 +134,30 @@
   }
 }
 
+
 #stopwatch {
   width: 80px;
 }
 
 #watchBell {
-  fill: red;
+  fill: orange;
+  position: absolute;
+  // -webkit-transform: translateY(-10px);
+  z-index: 9999;
 }
+
 
 #watchArm {
   fill: green;
-  transform-origin: 6% 67%;
+  transform-origin: 29.25% 70.5%;
 }
 
 #stopwatch:hover {
   #watchArm {
     -webkit-animation: spin linear 3s infinite;
-  }  
+
+  }
+  #watchBell {
+    -webkit-animation: cloudLeft linear 1.5s infinite;
+  }
 }
