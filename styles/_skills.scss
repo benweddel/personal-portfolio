@@ -43,6 +43,36 @@
   text-align: center;
 }
 
+#waver {
+  position: relative;
+}
+
+.wave {
+  width: 100px;
+  position: relative;
+  display: block;
+  top: 0;
+  left: calc(50% - 50px);
+}
+
+#pos1 {
+  position: relative;
+}
+
+#pos2 {
+  display: none;
+}
+
+#pos3 {
+  display: none;
+}
+
+#pos4 {
+  display: none;
+}
+
+
+
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
