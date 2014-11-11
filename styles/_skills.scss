@@ -1,10 +1,14 @@
 .skills {
   margin: 0 auto;
   padding: 50px 0;
-  background: #ddd;
+  background: url("../images/abstract-balls.jpg");
+  background-size: cover;
   text-align: center;
+  color: #444;
   .wrapper {
     width: 70%;
+    background: rgba(238,238,238,0.7);
+    padding-top: 20px;
   }
   h2 {
     margin: 0 auto;
@@ -24,6 +28,7 @@
 }
 
 .character {
+  margin: 40px 0;
   h2 {
     text-align: center;
   }

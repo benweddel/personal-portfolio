@@ -7,7 +7,7 @@
   float: left;
   img {
     display: block;
-    width: 350px;
+    width: 90%;
     text-align: center;
     margin: 0 auto;
     &:hover {
@@ -16,5 +16,7 @@
   }
   p {
     text-align: center;
+    width: 90%;
+    margin: 10px auto;
   }
 }

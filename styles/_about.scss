@@ -1,0 +1,43 @@
+// ----- About -----
+.col-1-2  {
+  width: 50%;
+  float: right;
+}
+.about { 
+  background: #efefef url('../images/benprofile.jpg') no-repeat 25% center;
+  background-size: contain;
+
+  padding-bottom: 40px;
+  h2 {
+  width: 100%;
+  text-align: left;
+  }
+}
+
+.experience {
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.jobs {
+  margin: 40px 0 60px 0;
+}
+
+.job {
+  width: 33%;
+  float: left;
+  margin-bottom: 30px;
+  padding-right: 20px;
+  h3, h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  p {
+    text-align: left;
+  }
+}

@@ -1,5 +1,5 @@
 footer {
-  background: $primaryColour;
+  background: $footerColour;
   padding: 30px 0;
   position: relative;
   z-index: 99;
@@ -36,6 +36,7 @@ footer {
       font-size: 35px;
       border-radius: 50%;
       overflow: hidden;
+      color: $iconColour;
       i {
         line-height: $socialHeight;
         margin: auto;
@@ -44,7 +45,7 @@ footer {
         display: block;
       }
       &:hover i {
-        color: red;
+        color: $footerHover;
       }
     }
   } 

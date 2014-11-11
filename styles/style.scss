@@ -17,14 +17,22 @@ $sectionColour: #3A3736;
 $dHeight: 275px;
 $socialHeight: 50px;
 
+$headerColour: #444;
+$headerFont: #fff;
+$headerHover: red;
+
+$footerColour: #444;
+$iconColour: #444;
+$footerHover: red;
+
 // ----- Partials -----
 @import "starter";
+@import "about";
 @import "skills";
 @import "portfolio";
 @import "piece";
 @import "footer";
 @import "test";
-
 
 // ----- General Layout -----
 body {
@@ -88,17 +96,6 @@ a {
   margin: 0 auto;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  background: url(../images/overlay-pattern.png);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  opacity: 0.3;
-}
-
 .col-1-3 {
   width: 33.33%;
   float: left;
@@ -109,9 +106,21 @@ a {
   float: left;
 }
 
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: url(../images/overlay-pattern.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0.3;
+  overflow: hidden;
+}
+
 // ----- Navigation -----
 header {
-  background: #5B848E;
+  background: $headerColour;
   position: relative;
   z-index: 101;
   ul {
@@ -123,87 +132,88 @@ header {
     display: inline-block;
     padding: 15px;
     a {
-      color: #fff;
+      color: $headerFont;
       display: inline-block;
       text-transform: uppercase;
       &:hover {
-        color: red;
+        color: $headerHover;
       }
     }
   } 
 }
 
+#contact {
+  position: absolute;
+  color: #fff;
+  right: 50px;
+  border: 1px solid #fff;
+  padding: 3px 5px;
+  margin-top: 11px;
+  font-weight: bold;
+  transition: all 0.5s;
+  .contact {
+    padding: 0;
+  }
+  svg {
+    width: 17px;
+    position: relative;
+    top: 2px;
+    .darrow {
+      fill: #fff;
+    }
+  }
+  &:hover {
+    background: #fff;
+    color: #444;
+    .darrow {
+      fill: #444;
+    }
+  }
+}
+
 // ----- Home -----
+
+.home {
+  background: url('../images/abandoned-forest-industry6.jpg');
+  background-size: cover;
+  position: relative;
+  padding: 160px 0 200px 0;
+}
 
 .container{
   position: relative;
-  margin: 160px 0;
 }
 .diamond {
-  z-index: 95; 
-  width: $dHeight;
-  height: $dHeight;
-  background: #fff;
+  z-index: 95;
+  width: 275px;
+  height: 275px;
+  background: #333;
   transform: rotate(45deg);
   position: absolute;
-  top: calc(50% - #{$dHeight/2});
-  left: calc(50% - #{$dHeight/2});
+  top: calc(50% - 137.5px);
+  left: calc(50% - 137.5px);
+  opacity: 0.8;
 }
 
 .intro {
   z-index: 100; 
   position: relative;
-  text-align: center; 
-  h1, h3 {
-    margin: 15px 0;
+  text-align: center;
+  color: #fff;
+  h1 {
+    margin: 0;
+    font-size: $fontSize*1.9;
+    // line-height: $fontSize*0.8;
   }
+
+  h3 {
+    margin: 0;
+    font-size: $fontSize*1.2;
+  }
+
   p {
     margin: 0;
-  }
-}
-
-// ----- About -----
-.col-1-2  {
-  width: 50%;
-  float: right;
-}
-.about { 
-  background: #ddd;
-  padding-bottom: 40px;
-  h2 {
-  width: 100%;
-  text-align: left;
-  }
-}
-
-.experience {
-  h2 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  p {
-    text-align: center;
-  }
-}
-
-.jobs {
-  margin: 40px 0 60px 0;
-}
-
-.job {
-  width: 50%;
-  float: left;
-  margin-bottom: 30px;
-  padding-right: 20px;
-  img {
-    float: left;
-    margin-right: 10px;
-  }
-  h3, h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  p {
-    text-align: left;
+    font-size: $fontSize*0.8;
+    line-height: $fontSize*0.9;
   }
 }
