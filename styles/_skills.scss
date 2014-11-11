@@ -3,6 +3,7 @@
   padding: 50px 0;
   background: url("../images/abstract-balls.jpg");
   background-size: cover;
+  background-attachment: fixed;
   text-align: center;
   color: #444;
   .wrapper {
@@ -119,20 +120,17 @@
   .bigGear, .smallGear {
     transform-origin: 50% 50%;
     display: inline-block;
-  }
-  .bigGear {
-    fill: red;
-  }
-  .smallGear {
-    fill: blue;
+    transition: all 1s;
   }
   &:hover {
     .smallGear {
       -webkit-animation: spin linear 3s infinite;
       animation: spin linear 3s infinite;
+      fill: #F45825;
     }
     .bigGear, {
       -webkit-animation: spin linear 3s infinite reverse;    
+      fill: $accentColour;
     }
   }
 }
@@ -166,6 +164,7 @@
   #sun {
     // -webkit-animation: sun linear 2s forwards;
     transform:scale(1.5);
+    fill: #FFD933;
   }
 }
 
@@ -175,7 +174,6 @@
 }
 
 #watchBell {
-  fill: orange;
   position: absolute;
   // -webkit-transform: translateY(-10px);
   z-index: 9999;
@@ -183,7 +181,6 @@
 
 
 #watchArm {
-  fill: green;
   transform-origin: 29.25% 70.5%;
 }
 

@@ -23,22 +23,24 @@ img.feature {
 }
 
 // ----- Solido -----
-.desktop {
-  width: 75%;
+
+.solido {
+  padding-left: 20px;
+}
+
+.desktop, .mobile {
   float: left;
   padding: 10px;
+  text-align: center;
   img {
     width: 100%;
-    margin: 20px;
   }
+}
+
+.desktop {
+  width: 75%;
 }
 
 .mobile {
   width: 25%;
-  float: left;
-  padding: 10px;
-  img {
-    width: 100%;
-    margin: 20px;
-  }
 }
