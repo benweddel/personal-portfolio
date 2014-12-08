@@ -14,6 +14,9 @@
 }
 
 .experience {
+  .clearfix {
+    margin: 40px 0 60px 0;  
+  }
   h2 {
     margin-left: auto;
     margin-right: auto;
@@ -21,10 +24,6 @@
   p {
     text-align: center;
   }
-}
-
-.jobs {
-  margin: 40px 0 60px 0;
 }
 
 .job {
@@ -38,5 +37,27 @@
   }
   p {
     text-align: left;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .experience {
+    .clearfix {
+      margin-bottom: 0;
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .job {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+    p {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }
