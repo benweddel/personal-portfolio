@@ -219,7 +219,12 @@ header {
   }
 }
 
-
 .person {
   fill: $accentColour;
+}
+
+@media all and (max-width: 421px) {
+  h2 {
+    width: 85%;
+  }
 }
