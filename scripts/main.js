@@ -11,6 +11,7 @@ portApp.danceDelay = 150;
 portApp.init = function(){
   $('#contact').on('click', function(){
     portApp.dance();
+    console.log('test');
   });
   // $('#gears').on('mouseover', function(){
   //   portApp.wave();
@@ -69,10 +70,6 @@ portApp.wave = function(){
       portApp.pos1.css('display','block');
     });
 };
-
-
-
-
 
 $(function(){
   portApp.init();

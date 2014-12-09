@@ -145,6 +145,7 @@ header {
 }
 
 #contact {
+  background: rgba(0,0,0,0);
   position: absolute;
   color: #fff;
   right: 50px;
@@ -153,6 +154,14 @@ header {
   padding: 3px 5px;
   font-weight: bold;
   transition: all 0.5s;
+  &:focus {
+    outline: none;
+  }
+  a {
+    color: #fff;
+    transition: all 0.5s;
+    text-transform: uppercase;
+  }
   svg {
     width: 17px;
     position: relative;
@@ -163,9 +172,11 @@ header {
   }
   &:hover {
     background: #fff;
-    color: #444;
     .darrow {
       fill: #444;
+    }
+    a {
+      color: #444;
     }
   }
 }

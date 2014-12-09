@@ -21,13 +21,17 @@
   }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 875px) {
   .piece {
     width: 50%;
+    &:last-of-type {
+      float: none;
+      margin: 0 auto;
+    }
   }
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 500px){
   .piece {
     width: 100%;
   }
