@@ -4,7 +4,7 @@
   float: right;
 }
 .about { 
-  background: #efefef url('../images/benprofile.jpg') no-repeat 25% center;
+  background: #efefef url('../images/benprofile.jpg') no-repeat 20% center;
   background-size: contain;
   padding-bottom: 40px;
   h2 {
@@ -12,6 +12,12 @@
   text-align: left;
   }
 }
+
+// @media all and (max-width: 970px){
+//   .about {
+//     background: 25% center;
+//   }
+// }
 
 .experience {
   .clearfix {
