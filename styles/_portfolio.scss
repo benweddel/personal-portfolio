@@ -20,3 +20,15 @@
     margin: 10px auto;
   }
 }
+
+@media all and (max-width: 900px) {
+  .piece {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 400px){
+  .piece {
+    width: 100%;
+  }
+}
