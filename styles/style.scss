@@ -181,6 +181,24 @@ header {
   }
 }
 
+@media all and (max-width: 660px){
+  #contact {
+    right: 20px;
+  }
+}
+
+@media all and (max-width: 540px){
+  header {
+    ul {
+      padding-bottom: 48px;
+    }
+  }
+  #contact {
+    top: 50px;  
+    left: calc(50% - 49px);
+  }
+}
+
 // ----- Home -----
 
 .home {
