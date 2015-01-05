@@ -8,16 +8,31 @@
   background-size: contain;
   padding-bottom: 40px;
   h2 {
-  width: 100%;
-  text-align: left;
+    width: 100%;
+    text-align: left;
+  }
+  img {
+    display: none;
   }
 }
 
-// @media all and (max-width: 970px){
-//   .about {
-//     background: 25% center;
-//   }
-// }
+@media all and (max-width: 420px){
+  .about {
+    background-image: none;
+    background-size: cover;
+    img {
+      display: block;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    .col-1-2 {
+      width: 100%;
+      float: none;
+    }
+  }
+}
 
 .experience {
   .clearfix {

@@ -7,25 +7,12 @@ $fontSize: 1.6em;
 $fontWeight: 300;
 $fontColour: #333;
 $inverseColour: #efefef;
-
 $primaryColour: #81B89D;
-$secondaryColour: #FE6A14;
-$successColour: #759DA7;
-$errorColour: #EB4B4D;
-$sectionColour: #3A3736;
-
 $accentColour: #A9CC66;
-
+$darkBackground: #444;
+$headerFont: #fff;
 $dHeight: 275px;
 $socialHeight: 50px;
-
-$headerColour: #444;
-$headerFont: #fff;
-$headerHover: #A9CC66;
-
-$footerColour: #444;
-$iconColour: #444;
-$footerHover: #A9CC66;
 
 // ----- Partials -----
 @import "starter";
@@ -34,7 +21,6 @@ $footerHover: #A9CC66;
 @import "portfolio";
 @import "piece";
 @import "footer";
-@import "test";
 
 // ----- General Layout -----
 body {
@@ -122,7 +108,7 @@ a {
 
 // ----- Navigation -----
 header {
-  background: $headerColour;
+  background: $darkBackground;
   position: relative;
   z-index: 101;
   ul {
@@ -138,14 +124,13 @@ header {
       display: inline-block;
       text-transform: uppercase;
       &:hover {
-        color: $headerHover;
+        color: $accentColour;
       }
     }
   } 
 }
 
 #contact {
-  background: rgba(0,0,0,0);
   position: absolute;
   color: #fff;
   right: 50px;
@@ -154,14 +139,7 @@ header {
   padding: 3px 5px;
   font-weight: bold;
   transition: all 0.5s;
-  &:focus {
-    outline: none;
-  }
-  a {
-    color: #fff;
-    transition: all 0.5s;
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
   svg {
     width: 17px;
     position: relative;
@@ -172,11 +150,9 @@ header {
   }
   &:hover {
     background: #fff;
+    color: #444;
     .darrow {
       fill: #444;
-    }
-    a {
-      color: #444;
     }
   }
 }
